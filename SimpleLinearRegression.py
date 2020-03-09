@@ -1,4 +1,5 @@
 import numpy as np
+from .metrics import r2_score
 
 class SimpleLinearRegression1():
 
@@ -67,6 +68,11 @@ class SimpleLinearRegression2():
 
         y_predict = [self._predict(x) for x in x_test]
         return np.array(y_predict)
+
+    def score(self, x_test, y_test):
+        """根据y_test和y_predict计算R2值"""
+        y_predict = self.predict(x_test)
+        return r2_score(y_test, y_predict)
 
     def _predict(self, x):
         """对给定的单个待预测数据x，返回预测结果值"""
