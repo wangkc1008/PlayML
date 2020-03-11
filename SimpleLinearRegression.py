@@ -24,6 +24,7 @@ class SimpleLinearRegression1():
 
         self.a_ = up / down
         self.b_ = y_mean - self.a_ * x_mean
+        return self
 
     def predict(self, x_test):
         """通过训练好的SimpleLinearRegression1模型计算得到x_test的预测值"""
@@ -60,6 +61,7 @@ class SimpleLinearRegression2():
 
         self.a_ = up / down
         self.b_ = y_mean - self.a_ * x_mean
+        return self
 
     def predict(self, x_test):
         """通过训练好的SimpleLinearRegression1模型计算得到x_test的预测值"""

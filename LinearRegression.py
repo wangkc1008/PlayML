@@ -18,6 +18,7 @@ class LinearRegression:
 
         self.interception_ = self._theta[0]
         self.coef_ = self._theta[1:]
+        return self
 
     def predict(self, X_test):
         """根据训练到的Linear Regression模型对测试集X_test进行预测"""
